@@ -5,6 +5,8 @@
   --color-headings: #1b0760;
   --color-body: #918ca4;
   --color-icon: #f3f9fa;
+  --color-border: #ccc;
+  --border-radius: 30px;
 }
 *,
 *::after,
@@ -218,6 +220,38 @@ ul {
 
 @media screen and (min-width: 1024px) {
   .btn {
+    font-size: 1.5rem;
+  }
+}
+
+/*Forms*/
+.input {
+  border-radius: var(--border-radius);
+  color: var(--color-headings);
+  font-size: 2rem;
+  outline: none;
+  padding: 1.5rem 3.5rem;
+}
+::placeholder {
+  color: #cdcbd7;
+  font-weight: lighter;
+}
+.input-group {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  display: flex;
+  box-shadow: 5px 10px 18px #e7ecef;
+}
+.input-group .input {
+  border: 0;
+  flex-grow: 1;
+  padding: 1.5rem 1rem;
+}
+.input-group .btn {
+  margin: 4px;
+}
+@media screen and (min-width: 1024px) {
+  .input {
     font-size: 1.5rem;
   }
 }
