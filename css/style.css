@@ -6,7 +6,7 @@
   --color-body: #918ca4;
   --color-icon: #f3f9fa;
   --color-border: #ccc;
-  --color-quote: #5c5577
+  --color-quote: #5c5577;
   --color-media_text: #bcb9cb;
   --border-radius: 30px;
 }
@@ -132,7 +132,6 @@ a {
 ul {
 }
 .list {
-
   list-style-type: none;
   list-style: none;
   padding-left: 0;
@@ -187,7 +186,7 @@ ul {
   align-items: center;
 }
 .icon--container--accent {
-  background: var(--color-accent)
+  background: var(--color-accent);
 }
 /*Buttons*/
 .btn {
@@ -195,7 +194,7 @@ ul {
   border: 0;
   font-size: 1.8rem;
   font-weight: 600;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   text-transform: uppercase;
   cursor: pointer;
   white-space: nowrap;
@@ -281,6 +280,7 @@ ul {
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 2rem;
+  width: 0;
 }
 .input-group .btn {
   margin: 4px;
@@ -400,7 +400,7 @@ ul {
   color: var(--color-quote);
   font-size: 3rem;
   font-style: italic;
-  letter-spacing: 1.3;
+  letter-spacing: 1.3px;
 }
 .quote__text::before {
   content: open-quote;
@@ -409,7 +409,7 @@ ul {
   content: close-quote;
 }
 
-.quote .media__line{
+.quote .media__line {
   margin-top: 1px;
 }
 .quote .quote_author {
@@ -450,7 +450,6 @@ ul {
   .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
   }
-  
 }
 
 /*Tesimonial*/
@@ -469,9 +468,9 @@ ul {
   right: -32px;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
   .testimonial .quote,
-  .testimonial .quote__author{
+  .testimonial .quote__author {
     font-size: 2.4rem;
   }
   .testimonial .quote {
@@ -486,7 +485,7 @@ ul {
 }
 .callout--primary {
   background: var(--color-primary);
-  color: white ;
+  color: white;
 }
 .callout__content {
   text-align: center;
@@ -534,7 +533,7 @@ ul {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: all 0.3s
+  transition: all 0.3s;
 }
 .collapsible--expanded .collapsible__chevron {
   transform: rotate(0);
@@ -560,9 +559,9 @@ ul {
   background: black;
   color: #7b858b;
 }
-.block__dark h1, 
-.block__dark h2, 
-.block__dark h3{
+.block__dark h1,
+.block__dark h2,
+.block__dark h3 {
   color: white;
 }
 .block__dark .block__heading {
@@ -600,14 +599,14 @@ ul {
 }
 .nav__item > a {
   color: #d2d0db;
-  transition: color .3s;
+  transition: color 0.3s;
 }
 .nav__item > a:hover {
-  color: white
+  color: white;
 }
 .nav__toggler {
-  opacity: .5;
-  transition: box-shadow .15s;
+  opacity: 0.5;
+  transition: box-shadow 0.15s;
   cursor: pointer;
 }
 .nav.collapsible--expanded .nav__toggler {
@@ -645,7 +644,6 @@ ul {
   width: 100%;
 }
 
-
 @media screen and (min-width: 768px) {
   .hero {
     padding-top: 0;
@@ -665,10 +663,11 @@ ul {
   outline: none;
 }
 .block-domain__prices {
+  color: var(--color-headings);
   display: grid;
   font-size: 2rem;
   font-weight: 600;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
   justify-items: center;
   margin: 0 auto;
@@ -694,7 +693,7 @@ ul {
   gap: 4rem 2rem;
   margin: 12rem 0;
 }
-.feature:nth-of-type {
+.feature:first-of-type {
   margin-top: 6rem;
 }
 .feature__heading {
@@ -710,18 +709,20 @@ ul {
     order: 2;
   }
 }
+
 /*Showcase Block*/
 .showcase__header {
   text-align: center;
   margin-bottom: 3rem;
 }
-
-/*Showcase Block*/
-.block-showcase__image > img{
+.showcase__title {
+  padding-top: 3rem;
+}
+.block-showcase__image > img {
   width: 100%;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
   .block__showcase .grid {
     grid-template-columns: 50% 50%;
   }
@@ -753,12 +754,12 @@ ul {
 .footer__copyright {
   font-size: 2.1rem;
   color: white;
-  opacity: .3;
+  opacity: 0.3;
 }
 
 @media screen and (min-width: 768px) {
   .footer__section {
-    grid-template-columns: repeat(auto-fit, minmax(10rem,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
   .footer .collapsible__chevron {
     display: none;
@@ -787,7 +788,7 @@ ul {
   }
   .footer a {
     color: #777;
-    transition: color .3s;
+    transition: color 0.3s;
   }
   .footer a:hover {
     color: #fff;
